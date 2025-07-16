@@ -1,0 +1,2223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étude Strategic Cold Email 2025 - 85M+ Emails Analysés</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1A1914;
+            --secondary: #FFFCE6;
+            --accent1: #FFEB69;
+            --accent2: #D5C8FF;
+            --white: #FFFFFF;
+            --gray: #6B7280;
+            --light-gray: #F3F4F6;
+            --success: #10B981;
+            --danger: #EF4444;
+            --blue: #3B82F6;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--light-gray);
+            z-index: 1000;
+            padding: 20px 0;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 900;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--primary);
+            color: var(--white);
+            padding: 150px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 235, 105, 0.2);
+            border: 2px solid var(--accent1);
+            color: var(--accent1);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 .gradient {
+            background: linear-gradient(135deg, var(--accent1), var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 60px;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .hero-stat {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent1);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .salescraft-mention {
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-number {
+            display: inline-block;
+            background: var(--accent1);
+            color: var(--primary);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Executive Summary */
+        .executive-summary {
+            background: var(--secondary);
+            padding: 100px 0;
+        }
+
+        .key-findings {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .finding-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            position: relative;
+        }
+
+        .finding-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+            border-color: var(--accent1);
+        }
+
+        .finding-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+        }
+
+        .finding-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .finding-value {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent1);
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .finding-description {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Context Box */
+        .context-box {
+            background: linear-gradient(135deg, var(--accent1), var(--accent2));
+            padding: 40px;
+            border-radius: 20px;
+            margin: 50px 0;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .context-box::before {
+            content: '📊 CONTEXTE CRUCIAL';
+            position: absolute;
+            top: -20px;
+            left: 40px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .context-box h4 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .context-box p {
+            color: var(--primary);
+            font-weight: 500;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Chart Container */
+        .chart-section {
+            margin: 60px 0;
+        }
+
+        .chart-container {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            position: relative;
+            height: 500px;
+        }
+
+        .chart-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .chart-description {
+            color: var(--gray);
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .chart-insight {
+            background: var(--accent1);
+            color: var(--primary);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .chart-insight::before {
+            content: '💡 INSIGHT CLÉ : ';
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Data Table */
+        .data-table {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            margin: 50px 0;
+        }
+
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table thead {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .data-table th {
+            padding: 25px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .data-table td {
+            padding: 20px;
+            border-bottom: 1px solid var(--light-gray);
+            font-size: 1rem;
+        }
+
+        .data-table tr:hover {
+            background: var(--light-gray);
+        }
+
+        .data-table .highlight-cell {
+            background: var(--accent1);
+            color: var(--primary);
+            font-weight: 900;
+            font-size: 1.4rem;
+        }
+
+        .table-source {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Email Examples */
+        .email-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .email-example {
+            background: var(--white);
+            border: 3px solid var(--light-gray);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        .email-example.bad {
+            border-color: var(--danger);
+        }
+
+        .email-example.good {
+            border-color: var(--success);
+        }
+
+        .email-header {
+            background: var(--light-gray);
+            padding: 25px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .email-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .email-badge.bad {
+            background: var(--danger);
+            color: white;
+        }
+
+        .email-badge.good {
+            background: var(--success);
+            color: white;
+        }
+
+        .email-subject {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .email-body {
+            padding: 30px;
+            line-height: 1.8;
+        }
+
+        .email-highlight {
+            background: var(--accent1);
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Action Box */
+        .action-box {
+            background: var(--accent2);
+            padding: 50px;
+            border-radius: 20px;
+            margin: 50px 0;
+            border: 3px solid var(--primary);
+        }
+
+        .action-box h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+
+        .action-list {
+            list-style: none;
+        }
+
+        .action-list li {
+            padding: 20px 0;
+            padding-left: 50px;
+            position: relative;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        .action-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 900;
+        }
+
+        /* New Sections Styles */
+        .cost-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .cost-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 3px solid var(--light-gray);
+            transition: all 0.3s ease;
+        }
+
+        .cost-card.winner {
+            border-color: var(--success);
+            background: linear-gradient(135deg, var(--success), #34D399);
+            color: white;
+        }
+
+        .cost-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .cost-method {
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .cost-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .cost-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Templates Section */
+        .templates-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .template-card {
+            background: var(--white);
+            border: 3px solid var(--accent1);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        .template-header {
+            background: var(--accent1);
+            color: var(--primary);
+            padding: 20px 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .template-body {
+            padding: 30px;
+        }
+
+        .template-email {
+            background: var(--light-gray);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+        }
+
+        .template-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .template-stat {
+            text-align: center;
+            padding: 15px;
+            background: var(--secondary);
+            border-radius: 10px;
+        }
+
+        .template-stat-value {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--accent1);
+        }
+
+        .template-stat-label {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+
+        /* Personalization Ranking */
+        .personalization-ranking {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            margin: 50px 0;
+        }
+
+        .personalization-ranking table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .personalization-ranking thead {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .personalization-ranking th {
+            padding: 25px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .personalization-ranking td {
+            padding: 20px;
+            border-bottom: 1px solid var(--light-gray);
+            font-size: 1rem;
+        }
+
+        .personalization-ranking tr:hover {
+            background: var(--light-gray);
+        }
+
+        .personalization-ranking .rank-1 {
+            background: var(--accent1);
+            color: var(--primary);
+            font-weight: 900;
+        }
+
+        /* Multi-Touch Sequence */
+        .sequence-table {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            margin: 50px 0;
+        }
+
+        .sequence-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .sequence-table thead {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .sequence-table th {
+            padding: 25px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sequence-table td {
+            padding: 20px;
+            border-bottom: 1px solid var(--light-gray);
+            font-size: 1rem;
+        }
+
+        .sequence-table tr:hover {
+            background: var(--light-gray);
+        }
+
+        /* Plan d'Action avec 3 cartes */
+        .plan-action {
+            background: var(--primary);
+            color: var(--white);
+            padding: 100px 0;
+        }
+
+        .plan-action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .plan-action-card {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .plan-action-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+            border-color: var(--accent1);
+        }
+
+        .plan-action-card h3 {
+            color: var(--accent1);
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .plan-action-card ul {
+            list-style: none;
+        }
+
+        .plan-action-card ul li {
+            padding: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .plan-action-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--accent1);
+            border-radius: 50%;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            background: var(--primary);
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .footer-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 900;
+        }
+
+        .footer-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent1);
+            color: var(--primary);
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 50px rgba(255, 235, 105, 0.3);
+        }
+
+        .author-section {
+            background: var(--secondary);
+            padding: 80px 0;
+        }
+
+        .author-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .author-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .author-info p {
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .author-tagline {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+
+        /* Legal Footer */
+        .legal-footer {
+            background: var(--light-gray);
+            padding: 40px 0;
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .legal-content {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .legal-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .legal-content p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .email-showcase {
+                grid-template-columns: 1fr;
+            }
+            
+            .author-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .plan-action-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .cost-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <div class="nav-content">
+            <div class="nav-logo">COLD EMAIL STUDY 2025</div>
+            <ul class="nav-links">
+                <li><a href="#cost-reality">Coût réalité</a></li>
+                <li><a href="#mobile-reality">Mobile</a></li>
+                <li><a href="#benchmarks">Benchmarks</a></li>
+                <li><a href="#saisonnalite">Saisonnalité</a></li>
+                <li><a href="#objets">Objets</a></li>
+                <li><a href="#personnalisation">Personnalisation</a></li>
+                <li><a href="#sequences">Séquences</a></li>
+                <li><a href="#plan-action">Plan d'action</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">ÉTUDE EXCLUSIVE 2025</div>
+                
+                <h1>
+                    La Plus Grande Étude<br>
+                    sur le <span class="gradient">Cold Email B2B</span><br>
+                    Jamais Réalisée
+                </h1>
+                
+                <p class="hero-subtitle">
+                    85 millions d'emails analysés (Europe et USA). 15 000 commerciaux suivis. 12 mois de données.<br>
+                    <strong>Une vérité brutale : le top 10% performe 8.1x mieux que la moyenne.</strong>
+                </p>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">85M+</div>
+                        <div class="hero-stat-label">Emails Analysés</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">15K</div>
+                        <div class="hero-stat-label">Commerciaux B2B</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">12</div>
+                        <div class="hero-stat-label">Mois de Données</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">8.1x</div>
+                        <div class="hero-stat-label">Performance Gap</div>
+                    </div>
+                </div>
+
+                <div class="salescraft-mention">
+                    <strong>Étude réalisée par Gong, retravaillée et condensée en version française</strong><br>
+                    <em>Leader mondial de l'intelligence commerciale - Données validées par 40 industries</em>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="executive-summary">
+        <div class="container">
+            <div class="section-header">
+                <h2>Les 6 découvertes qui changent tout</h2>
+                <p>Ce que 99% des commerciaux ignorent encore</p>
+            </div>
+
+            <div class="key-findings">
+                <div class="finding-card">
+                    <div class="finding-icon">📱</div>
+                    <h3 class="finding-title">Réalité mobile-first</h3>
+                    <div class="finding-value">81%</div>
+                    <p class="finding-description">
+                        Des emails B2B sont ouverts sur mobile. Vos emails de 200+ mots sont illisibles. 
+                        La limite : 80 mots maximum. <strong>Source : Forbes 2024</strong>
+                    </p>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-icon">🎯</div>
+                    <h3 class="finding-title">Objet ultra-court</h3>
+                    <div class="finding-value">4 mots</div>
+                    <p class="finding-description">
+                        Les objets de 1-4 mots génèrent 58% d'ouvertures vs 27% pour les objets longs. 
+                        "retards projet" surperforme "Optimisez vos processus projet avec notre solution".
+                    </p>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-icon">💰</div>
+                    <h3 class="finding-title">Coût par lead</h3>
+                    <div class="finding-value">18€</div>
+                    <p class="finding-description">
+                        Cold email vs 67€ Google Ads vs 15-350€ LinkedIn Ads. 
+                        Le canal le plus rentable reste massivement sous-exploité. <strong>Source : Woodpecker 2024</strong>
+                    </p>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-icon">🔄</div>
+                    <h3 class="finding-title">Séquence optimale</h3>
+                    <div class="finding-value">6 touches</div>
+                    <p class="finding-description">
+                        Sur 21 jours maximisent le ROI. Au-delà, le coût dépasse les bénéfices. 
+                        50% des meetings arrivent après la 4ème tentative.
+                    </p>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-icon">📈</div>
+                    <h3 class="finding-title">Saisonnalité critique</h3>
+                    <div class="finding-value">-7%</div>
+                    <p class="finding-description">
+                        Délivrabilité en novembre vs janvier (99% → 92%). 
+                        Votre timing peut faire ou défaire votre campagne. <strong>Source : Belkins 2024</strong>
+                    </p>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-icon">🎭</div>
+                    <h3 class="finding-title">Personnalisation activité</h3>
+                    <div class="finding-value">24%</div>
+                    <p class="finding-description">
+                        Taux de réponse avec personnalisation basée sur l'activité. "J'ai vu votre post sur..." 
+                        génère 24% de réponses vs 2% pour du générique. L'université de votre prospect ? On s'en fiche.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Reality Section -->
+    <section class="section" id="cost-reality">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">PARTIE 01</span>
+                <h2 class="section-title">Le coût de l'inaction</h2>
+                <p class="section-subtitle">
+                    Pendant que vous hésitez, vos concurrents capturent VOS prospects 
+                    à 18€ par lead. Voici la réalité des coûts d'acquisition.
+                </p>
+            </div>
+
+            <div class="context-box">
+                <h4>Pourquoi cette comparaison change tout ?</h4>
+                <p>
+                    Un commercial SaaS moyen coûte 60K€/an en salaire + charges. S'il passe 4h/jour sur de la prospection inefficace, 
+                    cela représente 120€/jour de temps perdu. Avec une campagne de cold emailing optimisée, ce même commercial peut générer 
+                    3x plus de meetings qualifiés pour le même investissement temps.
+                </p>
+            </div>
+
+            <div class="cost-comparison">
+                <div class="cost-card winner">
+                    <div class="cost-method">Cold Email</div>
+                    <div class="cost-value">18€</div>
+                    <div class="cost-description">Par lead qualifié<br>ROI: 3-6 leads pour 10€</div>
+                </div>
+                
+                <div class="cost-card">
+                    <div class="cost-method">Google Ads</div>
+                    <div class="cost-value">67€</div>
+                    <div class="cost-description">Par lead<br>+275% vs cold email</div>
+                </div>
+                
+                <div class="cost-card">
+                    <div class="cost-method">LinkedIn Ads</div>
+                    <div class="cost-value">15-350€</div>
+                    <div class="cost-description">Par lead<br>Variabilité énorme</div>
+                </div>
+            </div>
+
+            <div class="chart-section">
+                <h3 class="chart-title">ROI comparatif par canal d'acquisition</h3>
+                <p class="chart-description">
+                    Investissement de 1000€ sur 3 mois - Nombre de leads générés
+                </p>
+                <div class="chart-container">
+                    <canvas id="roiChart" style="height: 400px;"></canvas>
+                </div>
+                <div class="chart-insight">
+                    Avec 1000€, le cold email génère 55 leads qualifiés vs 15 pour Google Ads vs 3-67 pour LinkedIn. 
+                    Le cold email reste le canal le plus prévisible ET le plus rentable pour le B2B.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile First Reality -->
+    <section class="section" id="mobile-reality">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">PARTIE 02</span>
+                <h2 class="section-title">La réalité mobile-first</h2>
+                <p class="section-subtitle">
+                    81% des emails B2B sont ouverts sur mobile. Vos emails de 200+ mots 
+                    sont illisibles et ignorés. Voici pourquoi 80 mots maximum.
+                </p>
+            </div>
+
+            <div class="context-box">
+                <h4>La révolution mobile que vous avez ratée</h4>
+                <p>
+                    Un iPhone 15 affiche 47 mots sans scroll. Un Samsung Galaxy S24 : 52 mots. 
+                    Votre email de 150 mots oblige à scroller 3 fois. 87% des lecteurs abandonnent avant la fin. 
+                    <strong>Sources : Forbes 2024, SalesSo 2024</strong>
+                </p>
+            </div>
+
+            <div class="chart-section">
+                <h3 class="chart-title">Taux de lecture mobile vs desktop par longueur</h3>
+                <p class="chart-description">
+                    Impact de la longueur d'email sur la lecture complète (mobile vs desktop)
+                </p>
+                <div class="chart-container">
+                    <canvas id="mobileChart" style="height: 400px;"></canvas>
+                </div>
+                <div class="chart-insight">
+                    Sur mobile, 90% des emails >100 mots ne sont pas lus entièrement. 
+                    La chute est brutale : 80 mots = 78% de lecture, 120 mots = 34% de lecture.
+                </div>
+            </div>
+
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Longueur Email</th>
+                            <th>Taux Lecture Mobile</th>
+                            <th>Taux Lecture Desktop</th>
+                            <th>Taux Réponse Moyen</th>
+                            <th>Verdict</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>< 50 mots</strong></td>
+                            <td>89%</td>
+                            <td>95%</td>
+                            <td>2.3%</td>
+                            <td>Trop court</td>
+                        </tr>
+                        <tr style="background: var(--accent1);">
+                            <td><strong>51-80 mots</strong></td>
+                            <td>78%</td>
+                            <td>92%</td>
+                            <td class="highlight-cell">2.9%</td>
+                            <td>SWEET SPOT</td>
+                        </tr>
+                        <tr>
+                            <td><strong>81-120 mots</strong></td>
+                            <td>34%</td>
+                            <td>78%</td>
+                            <td>2.0%</td>
+                            <td>Limite</td>
+                        </tr>
+                        <tr>
+                            <td><strong>121-200 mots</strong></td>
+                            <td>18%</td>
+                            <td>56%</td>
+                            <td>1.6%</td>
+                            <td>Trop long</td>
+                        </tr>
+                        <tr>
+                            <td><strong>200+ mots</strong></td>
+                            <td>7%</td>
+                            <td>34%</td>
+                            <td>0.9%</td>
+                            <td>Email marketing</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="table-source">
+                    * Données basées sur 2.3M d'emails analysés par Woodpecker & Belkins 2024
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benchmarks Section -->
+    <section class="section" id="benchmarks">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">PARTIE 03</span>
+                <h2 class="section-title">Benchmarks : où vous situez-vous ?</h2>
+                <p class="section-subtitle">
+                    Analyse comparative des performances entre commerciaux moyens, 
+                    top 25% et top 10% sur 15,247 commerciaux suivis pendant 12 mois.
+                </p>
+            </div>
+
+            <div class="context-box">
+                <h4>Comment lire ces données ?</h4>
+                <p>
+                    <strong>Commercial moyen :</strong> 1-3 ans d'expérience, suit les process basiques, quota 150-200K€/an.<br>
+                    <strong>Top 25% :</strong> 3-5 ans d'expérience, process optimisés, quota 200-300K€/an.<br>
+                    <strong>Top 10% :</strong> 5+ ans d'expérience, process documentés et A/B testés, quota 300K€+/an.<br>
+                    Un commercial moyen à temps plein envoie ~1000 emails/mois.
+                    <strong>Les "top 10%" ne sont pas plus talentueux - ils ont juste un meilleur process.</strong>
+                </p>
+            </div>
+
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Performance Level</th>
+                            <th>Emails/Mois</th>
+                            <th>Ouvertures</th>
+                            <th>Taux Ouverture</th>
+                            <th>Réponses</th>
+                            <th>Taux Réponse</th>
+                            <th>Meetings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Commercial Moyen</strong></td>
+                            <td>1,000</td>
+                            <td>273</td>
+                            <td>27.3%</td>
+                            <td>19</td>
+                            <td>1.9%</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Top 25%</strong></td>
+                            <td>1,000</td>
+                            <td>465</td>
+                            <td>46.5%</td>
+                            <td>46</td>
+                            <td>4.6%</td>
+                            <td>13</td>
+                        </tr>
+                        <tr style="background: var(--accent1);">
+                            <td><strong>Top 10%</strong></td>
+                            <td>1,000</td>
+                            <td>579</td>
+                            <td>57.9%</td>
+                            <td>79</td>
+                            <td>7.9%</td>
+                            <td class="highlight-cell">23</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="table-source">
+                    * Données Gong sur 85M+ d'emails - Jan 2024 à Jan 2025<br>
+                    ** Top reps obtiennent 2.1x plus d'ouvertures et 4.2x plus de réponses
+                </p>
+            </div>
+
+            <div class="chart-section">
+                <h3 class="chart-title">Entonnoir de conversion par niveau de performance</h3>
+                <p class="chart-description">
+                    Visualisation claire du processus du contact au meeting
+                </p>
+                <div class="chart-container">
+                    <canvas id="funnelChart" style="height: 400px;"></canvas>
+                </div>
+                <div class="chart-insight">
+                    Les top 10% ne sont pas juste "un peu meilleurs" - ils surperforment à CHAQUE étape 
+                    de l'entonnoir. Résultat : un effet multiplicateur qui génère 8.1x plus de meetings.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Performance -->
+    <section class="section" id="saisonnalite">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">PARTIE 04</span>
+                <h2 class="section-title">Saisonnalité & timing</h2>
+                <p class="section-subtitle">
+                    Votre timing peut faire ou défaire votre campagne. Voici quand 
+                    envoyer et quand éviter pour maximiser vos résultats.
+                </p>
+            </div>
+
+            <div class="context-box">
+                <h4>Pourquoi novembre est catastrophique ?</h4>
+                <p>
+                    Black Friday, Cyber Monday, campagnes de fin d'année surchargent les boîtes mail. 
+                    Les filtres anti-spam se durcissent. Les décideurs sont débordés par les budgets 2025. 
+                    <strong>Résultat : -7% de délivrabilité vs janvier.</strong>
+                </p>
+            </div>
+
+            <div class="chart-section">
+                <h3 class="chart-title">Délivrabilité par mois (2024)</h3>
+                <p class="chart-description">
+                    Évolution de la délivrabilité tout au long de l'année
+                </p>
+                <div class="chart-container">
+                    <canvas id="seasonalChart" style="height: 400px;"></canvas>
+                </div>
+                <div class="chart-insight">
+                    Janvier-Mars : période dorée (98-99% délivrabilité). 
+                    Juin-Août : ralentissement estival mais correct (95-96%). 
+                    Novembre-Décembre : éviter absolument (<93%).
+                </div>
+            </div>
+
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Période</th>
+                            <th>Délivrabilité Moyenne</th>
+                            <th>Meilleur Jour</th>
+                            <th>Meilleure Heure</th>
+                            <th>Stratégie</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: var(--accent1);">
+                            <td><strong>Janvier-Mars</strong></td>
+                            <td class="highlight-cell">98.5%</td>
+                            <td>Mardi</td>
+                            <td>10h-11h</td>
+                            <td>FONCEZ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Avril-Mai</strong></td>
+                            <td>97.2%</td>
+                            <td>Jeudi</td>
+                            <td>14h-15h</td>
+                            <td>Optimal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Juin-Août</strong></td>
+                            <td>95.8%</td>
+                            <td>Mardi</td>
+                            <td>9h-10h</td>
+                            <td>Vacances CEO</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Septembre-Octobre</strong></td>
+                            <td>94.9%</td>
+                            <td>Mercredi</td>
+                            <td>15h-16h</td>
+                            <td>Reprise</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Novembre-Décembre</strong></td>
+                            <td>92.8%</td>
+                            <td>Mardi</td>
+                            <td>11h-12h</td>
+                            <td>ÉVITER</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="table-source">
+                    * Source : Belkins 2024 - Analyse de 5.5M emails sur 12 mois
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subject Lines -->
+    <section class="section" id="objets">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">PARTIE 05</span>
+                <h2 class="section-title">Maîtriser l'objet d'email</h2>
+                <p class="section-subtitle">
+                    3 secondes pour convaincre. 30 caractères visibles sur mobile. 
+                    Voici comment les top 10% écrivent leurs objets.
+                </p>
+            </div>
+
+            <div class="context-box">
+                <h4>Pourquoi "retards projet" surperforme "Solution de gestion de projet" ?</h4>
+                <p>
+                    L'objet court crée de la curiosité sans donner la solution. Il ressemble à un email interne. 
+                    Il évite les mots-clés spam. Il est entièrement visible sur mobile. 
+                    <strong>Résultat : 58% d'ouverture vs 12% pour l'objet long.</strong>
+                </p>
+            </div>
+
+            <div class="chart-section">
+                <h3 class="chart-title">Taux d'ouverture par longueur d'objet</h3>
+                <p class="chart-description">
+                    Impact du nombre de mots sur le taux d'ouverture
+                </p>
+                <div class="chart-container">
+                    <canvas id="subjectChart" style="height: 400px;"></canvas>
+                </div>
+                <div class="chart-insight">
+                    1-2 mots : 62% d'ouverture. 3-4 mots : 58%. 5+ mots : chute brutale. 
+                    Chaque mot supplémentaire vous coûte 8-12% d'ouvertures.
+                </div>
+            </div>
+
+            <div class="email-showcase">
+                <div class="email-example bad">
+                    <div class="email-header">
+                        <span class="email-badge bad">MAUVAIS EXEMPLE</span>
+                        <div class="email-subject">
+                            Objet: Révolutionnez votre productivité commerciale avec notre plateforme IA innovante
+                        </div>
+                    </div>
+                    <div class="email-body">
+                        <p>❌ 11 mots (trop long)</p>
+                        <p>❌ Buzzwords ("révolutionnez", "IA", "innovante")</p>
+                        <p>❌ Ressemble à du spam marketing</p>
+                        <p>❌ Pas visible entièrement sur mobile</p>
+                        <p><strong>Résultat : 8% d'ouvertures</strong></p>
+                    </div>
+                </div>
+
+                <div class="email-example good">
+                    <div class="email-header">
+                        <span class="email-badge good">BON EXEMPLE</span>
+                        <div class="email-subject">
+                            Objet: retards projet
+                        </div>
+                    </div>
+                    <div class="email-body">
+                        <p>✅ 2 mots (optimal)</p>
+                        <p>✅ Crée de la curiosité</p>
+                        <p>✅ Ressemble à un email interne</p>
+                        <p>✅ Évite les mots-clés spam</p>
+                        <p><strong>Résultat : 58% d'ouvertures</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-box">
+                <h3>Les 10 objets qui convertissent le mieux</h3>
+                <ul class="action-list">
+                    <li><strong>"budget 2025"</strong> - 62% d'ouvertures</li>
+                    <li><strong>"question rapide"</strong> - 59% d'ouvertures</li>
+                    <li><strong>"retards projet"</strong> - 57% d'ouvertures</li>
+                    <li><strong>"[Prénom]?"</strong> - 56% d'ouvertures</li>
+                    <li><strong>"15 min jeudi?"</strong> - 54% d'ouvertures</li>
+                    <li><strong>"délais essai"</strong> - 52% d'ouvertures</li>
+                    <li><strong>"recrutement ops"</strong> - 51% d'ouvertures</li>
+                    <li><strong>"prévisions 2024"</strong> - 49% d'ouvertures</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalization Ranking -->
+    <section class="section" id="personnalisation">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">PARTIE 06</span>
+                <h2 class="section-title">Classement de la personnalisation</h2>
+                <p class="section-subtitle">
+                    Toutes les personnalisations ne se valent pas. Voici le classement 
+                    des 5 types de personnalisation par taux de réponse.
+                </p>
+            </div>
+
+            <div class="context-box">
+                <h4>Pourquoi l'activité LinkedIn bat l'université ?</h4>
+                <p>
+                    L'activité LinkedIn montre que vous suivez leur actualité business. L'université est un détail personnel 
+                    qui n'apporte aucune valeur. Les décideurs veulent qu'on parle de LEURS problèmes, pas de nos points communs.
+                    <strong>Focus sur le business, pas sur le personal.</strong>
+                </p>
+            </div>
+
+            <div class="personalization-ranking">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rang</th>
+                            <th>Type de Personnalisation</th>
+                            <th>Exemple</th>
+                            <th>Taux de Réponse</th>
+                            <th>Impact vs Baseline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rank-1">
+                            <td><strong>1</strong></td>
+                            <td><strong>Basée sur l'activité</strong></td>
+                            <td>"J'ai vu votre post sur la transformation digitale"</td>
+                            <td><strong>24%</strong></td>
+                            <td>+1100%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td><strong>Événements déclencheurs</strong></td>
+                            <td>"Félicitations pour la levée de 10M€"</td>
+                            <td>18%</td>
+                            <td>+800%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td><strong>Entreprise</strong></td>
+                            <td>"J'ai vu que TechCorp recrute 50 commerciaux"</td>
+                            <td>9%</td>
+                            <td>+350%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4</strong></td>
+                            <td><strong>Industrie</strong></td>
+                            <td>"Dans le SaaS B2B, le CAC moyen..."</td>
+                            <td>6%</td>
+                            <td>+200%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td><strong>Personnelle</strong></td>
+                            <td>"J'ai vu qu'on a fait la même école"</td>
+                            <td>3%</td>
+                            <td>+50%</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td><strong>Baseline (aucune)</strong></td>
+                            <td>"Je vous contacte car..."</td>
+                            <td>2%</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="action-box">
+                <h3>Événements déclencheurs qui convertissent le mieux</h3>
+                <ul class="action-list">
+                    <li><strong>Levée de fonds</strong> - 18% de taux de réponse</li>
+                    <li><strong>Nouveau poste</strong> (<90 jours) - 16% de taux de réponse</li>
+                    <li><strong>Expansion géographique</strong> - 14% de taux de réponse</li>
+                    <li><strong>Recrutement massif</strong> - 12% de taux de réponse</li>
+                    <li><strong>Post LinkedIn viral</strong> - 11% de taux de réponse</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Touch Sequence -->
+    <section class="section" id="sequences">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">PARTIE 07</span>
+                <h2 class="section-title">La séquence multi-touch</h2>
+                <p class="section-subtitle">
+                    6 emails sur 21 jours. Voici la séquence exacte utilisée par 
+                    les top 10% pour maximiser les réponses.
+                </p>
+            </div>
+
+            <div class="context-box">
+                <h4>Pourquoi s'arrêter à 6 emails ?</h4>
+                <p>
+                    Après 6 emails, le taux de réponse tombe sous 0.5%. Le ROI devient négatif 
+                    (temps investi vs résultats). Les top performers s'arrêtent à 6 touchpoints sur 21 jours.
+                    <strong>50% des meetings arrivent après le 4ème contact.</strong>
+                </p>
+            </div>
+
+            <div class="chart-section">
+                <h3 class="chart-title">Taux de réponse par numéro de contact</h3>
+                <p class="chart-description">
+                    Évolution du taux de réponse selon le nombre de contacts
+                </p>
+                <div class="chart-container">
+                    <canvas id="multiTouchChart" style="height: 400px;"></canvas>
+                </div>
+                <div class="chart-insight">
+                    Le taux de réponse cumulé atteint 6.4% après 6 contacts. 
+                    Chaque email supplémentaire apporte moins de 0.3% de réponses additionnelles.
+                </div>
+            </div>
+
+            <div class="sequence-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Touch #</th>
+                            <th>Jour</th>
+                            <th>Canal</th>
+                            <th>Message Type</th>
+                            <th>Exemple</th>
+                            <th>Taux Réponse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td>J+0</td>
+                            <td>Email</td>
+                            <td>Introduction</td>
+                            <td>"J'ai vu votre post sur..."</td>
+                            <td>1.9%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>J+3</td>
+                            <td>Email</td>
+                            <td>Relance valeur</td>
+                            <td>"J'ai pensé à 3 idées..."</td>
+                            <td>1.2%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>J+7</td>
+                            <td>LinkedIn</td>
+                            <td>Connexion + Note</td>
+                            <td>"On a des contacts communs..."</td>
+                            <td>0.9%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4</strong></td>
+                            <td>J+10</td>
+                            <td>Appel + Email</td>
+                            <td>Message vocal + Relance</td>
+                            <td>"Je vous ai laissé un message..."</td>
+                            <td>0.8%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td>J+14</td>
+                            <td>Email</td>
+                            <td>Étude de cas</td>
+                            <td>"Voici comment [Client] a..."</td>
+                            <td>0.7%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6</strong></td>
+                            <td>J+21</td>
+                            <td>Email</td>
+                            <td>Email de rupture</td>
+                            <td>"Dernière tentative..."</td>
+                            <td>0.6%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="table-source">
+                    * Séquence optimale basée sur l'analyse de 2.3M de séquences
+                </p>
+            </div>
+
+            <div class="action-box">
+                <h3>Scripts de relance et d'emails de rupture</h3>
+                <ul class="action-list">
+                    <li><strong>Email de relance (J+3)</strong> : "Des nouvelles ?" - 1 phrase seulement</li>
+                    <li><strong>Email de rupture (J+21)</strong> : "Je ne vous embête plus après celui-ci" - Double le taux de réponse</li>
+                    <li><strong>Intégration appel téléphonique</strong> : Double ou triple le taux de réponse de la séquence email</li>
+                    <li><strong>Script message vocal</strong> : "Bonjour [Prénom], Ali de salesCraft. J'ai une idée pour [problème]. Rappelez-moi au 06..."</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">PARTIE 08</span>
+                <h2 class="section-title">Templates prêts à l'emploi</h2>
+                <p class="section-subtitle">
+                    Les 3 templates utilisés par les top 10% pour générer 23 meetings/mois. 
+                    Copiez-collez et adaptez à votre secteur.
+                </p>
+            </div>
+
+            <div class="templates-grid">
+                <div class="template-card">
+                    <div class="template-header">
+                        TEMPLATE #1 - "ÉVÉNEMENT DÉCLENCHEUR" (Taux de réponse moyen : 18%)
+                    </div>
+                    <div class="template-body">
+                        <div class="template-email">
+                            <strong>Objet:</strong> levée 10M€<br><br>
+                            
+                            Bonjour [Prénom],<br><br>
+                            
+                            Félicitations pour la levée de 10M€ ! J'ai vu l'annonce sur Les Echos.<br><br>
+                            
+                            La plupart des scale-ups à ce stade nous disent que gérer 3 CRM différents ralentit leurs équipes de 40%.<br><br>
+                            
+                            On a aidé Alan à unifier leur stack et gagner 2h/jour/commercial après leur série B.<br><br>
+                            
+                            Ça vous dirait qu'on échange 15 min sur votre roadmap tech ?<br><br>
+                            
+                            [Signature]
+                        </div>
+                        <div class="template-stats">
+                            <div class="template-stat">
+                                <div class="template-stat-value">18%</div>
+                                <div class="template-stat-label">Taux Réponse</div>
+                            </div>
+                            <div class="template-stat">
+                                <div class="template-stat-value">72 mots</div>
+                                <div class="template-stat-label">Longueur</div>
+                            </div>
+                            <div class="template-stat">
+                                <div class="template-stat-value">62%</div>
+                                <div class="template-stat-label">Taux Ouverture</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-header">
+                        TEMPLATE #2 - "PREUVE SOCIALE" (Taux de réponse moyen : 12%)
+                    </div>
+                    <div class="template-body">
+                        <div class="template-email">
+                            <strong>Objet:</strong> résultat doctolib<br><br>
+                            
+                            Bonjour [Prénom],<br><br>
+                            
+                            J'ai vu votre post LinkedIn sur les défis de scaling commercial chez [Entreprise].<br><br>
+                            
+                            Doctolib était dans la même situation l'an dernier : 50 commerciaux, 3 outils, chaos total.<br><br>
+                            
+                            Résultat après 6 mois : +127% de meetings bookés, -34% de temps admin.<br><br>
+                            
+                            Je peux vous montrer exactement comment ils ont fait ?<br><br>
+                            
+                            [Signature]
+                        </div>
+                        <div class="template-stats">
+                            <div class="template-stat">
+                                <div class="template-stat-value">12%</div>
+                                <div class="template-stat-label">Taux Réponse</div>
+                            </div>
+                            <div class="template-stat">
+                                <div class="template-stat-value">68 mots</div>
+                                <div class="template-stat-label">Longueur</div>
+                            </div>
+                            <div class="template-stat">
+                                <div class="template-stat-value">54%</div>
+                                <div class="template-stat-label">Taux Ouverture</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-header">
+                        TEMPLATE #3 - "EMAIL DE RUPTURE" (Taux de réponse moyen : 8%)
+                    </div>
+                    <div class="template-body">
+                        <div class="template-email">
+                            <strong>Objet:</strong> dernier message<br><br>
+                            
+                            Bonjour [Prénom],<br><br>
+                            
+                            Je ne vais pas vous embêter après celui-ci.<br><br>
+                            
+                            J'ai préparé un benchmark de 5 concurrents avec leurs prix et fonctionnalités.<br><br>
+                            
+                            Ça peut vous intéresser même si vous ne travaillez pas avec nous.<br><br>
+                            
+                            Sinon, bonne continuation !<br><br>
+                            
+                            [Signature]
+                        </div>
+                        <div class="template-stats">
+                            <div class="template-stat">
+                                <div class="template-stat-value">8%</div>
+                                <div class="template-stat-label">Taux Réponse</div>
+                            </div>
+                            <div class="template-stat">
+                                <div class="template-stat-value">49 mots</div>
+                                <div class="template-stat-label">Longueur</div>
+                            </div>
+                            <div class="template-stat">
+                                <div class="template-stat-value">47%</div>
+                                <div class="template-stat-label">Taux Ouverture</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-box">
+                <h3>CTAs qui fonctionnent vs ceux à éviter</h3>
+                <ul class="action-list">
+                    <li><strong>✅ TOP CTAs :</strong> "J'ai préparé un benchmark..." (+28% vs baseline)</li>
+                    <li><strong>✅ TOP CTAs :</strong> "Je peux vous envoyer l'étude..." (+22% vs baseline)</li>
+                    <li><strong>✅ TOP CTAs :</strong> "Ça vous intéresse si je vous montre..." (+18% vs baseline)</li>
+                    <li><strong>❌ À ÉVITER :</strong> "Avez-vous 30 minutes cette semaine ?" (-44% vs baseline)</li>
+                    <li><strong>❌ À ÉVITER :</strong> "Puis-je vous présenter notre solution ?" (-38% vs baseline)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan d'Action -->
+    <section class="plan-action" id="plan-action">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number" style="background: var(--accent1); color: var(--primary);">PLAN D'ACTION</span>
+                <h2 class="section-title" style="color: var(--white);">Votre feuille de route 30 jours</h2>
+                <p class="section-subtitle" style="color: var(--white); opacity: 0.9;">
+                    Comment passer de 3 à 23 meetings/mois. Mode d'emploi étape par étape.
+                </p>
+            </div>
+
+            <div class="plan-action-grid">
+                <div class="plan-action-card">
+                    <h3>Semaine 1 : Audit & Setup</h3>
+                    <ul>
+                        <li>📊 Calculez vos métriques actuelles</li>
+                        <li>✂️ Réduisez vos objets à 4 mots max</li>
+                        <li>📝 Réécrivez 5 templates <100 mots</li>
+                        <li>🎯 Identifiez 3 trigger events</li>
+                    </ul>
+                </div>
+
+                <div class="plan-action-card">
+                    <h3>Semaine 2 : Test & Learn</h3>
+                    <ul>
+                        <li>🧪 A/B testez 3 objets différents</li>
+                        <li>⏰ Testez mardi 10h vs jeudi 14h</li>
+                        <li>💡 Créez 3 offres de valeur</li>
+                        <li>📞 Ajoutez le message vocal jour 4</li>
+                    </ul>
+                </div>
+
+                <div class="plan-action-card">
+                    <h3>Semaine 3-4 : Scale</h3>
+                    <ul>
+                        <li>📈 Doublez sur ce qui marche</li>
+                        <li>🔄 Lancez séquences 6 touches</li>
+                        <li>🎯 50 emails perso/jour max</li>
+                        <li>📊 Tracking quotidien KPIs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <p style="font-size: 1.5rem; margin-bottom: 30px; color: var(--white);">
+                    Les top 10% ne sont pas plus talentueux.<br>
+                    Ils ont juste un meilleur process.
+                </p>
+                <p style="font-size: 1.2rem; color: var(--accent1); margin-bottom: 40px;">
+                    Maintenant, vous avez le leur. À vous de jouer.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Section -->
+    <section class="author-section">
+        <div class="container">
+            <div class="author-content">
+                <div class="author-image">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQGJJgXqN6bZ6g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696834857437?e=1740614400&v=beta&t=jgmOSAl0VBtJ7XOQHvzGXKWgGgLQrOdvPJg0TFJLj-4" alt="Ali Rahmani" />
+                </div>
+                <div class="author-info">
+                    <h3>Ali Rahmani</h3>
+                    <p>
+                        15 ans d'expérience en vente B2B complexe. J'ai dirigé des équipes Sales dans plusieurs SaaS, 
+                        recruté et formé des dizaines de commerciaux, sur des cycles courts comme sur des cycles longs.
+                    </p>
+                    <p>
+                        J'accompagne aujourd'hui les startups et PME à structurer leur acquisition commerciale 
+                        pour passer de 2-3 RDV/mois à 15-20 RDV/mois de manière prévisible.
+                    </p>
+                    <p>
+                        <strong>+50 startups accompagnées</strong> • <strong>Spécialiste B2B SaaS</strong> • <strong>Basé à Paris</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+        <div class="container">
+            <h2>Vous voulez passer au niveau supérieur ?</h2>
+            <p>
+                Cette étude vous donne la théorie. Vous voulez la pratique ?<br>
+                Réservez votre audit stratégique gratuit de 30 minutes.
+            </p>
+            <a href="https://calendly.com/alirahmani/entretien-candidature-ali-rahmani" class="cta-button">Réserver mon audit gratuit</a>
+            <p style="margin-top: 40px; font-size: 1rem; opacity: 0.7;">
+                Pas de vente forcée. Juste 30 minutes pour identifier vos 3 premiers axes d'amélioration.
+            </p>
+        </div>
+    </section>
+
+    <!-- Legal Footer -->
+    <section class="legal-footer">
+        <div class="container">
+            <div class="legal-content">
+                <h4>Méthodologie & sources</h4>
+                <p>
+                    Cette analyse est basée sur l'étude "The Ultimate Cold Email Data Report" 
+                    réalisée par Gong en 2024. Les données ont été retravaillées, analysées et présentées 
+                    dans un format adapté au marché français. Toutes les statistiques citées sont créditées 
+                    à leurs auteurs originaux. Cette étude constitue une analyse transformative des données 
+                    originales pour apporter une valeur ajoutée au contexte français.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Configuration Chart.js
+        Chart.defaults.font.family = 'Inter, sans-serif';
+        Chart.defaults.font.size = 13;
+        Chart.defaults.color = '#1A1914';
+
+        // ROI Chart
+        const roiCtx = document.getElementById('roiChart').getContext('2d');
+        new Chart(roiCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Cold Email', 'Google Ads', 'LinkedIn Ads (min)', 'LinkedIn Ads (max)'],
+                datasets: [{
+                    label: 'Leads générés pour 1000€',
+                    data: [55, 15, 67, 3],
+                    backgroundColor: [
+                        '#10B981',
+                        '#EF4444',
+                        '#F59E0B',
+                        '#F59E0B'
+                    ],
+                    borderColor: '#1A1914',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Nombre de leads'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Mobile Chart
+        const mobileCtx = document.getElementById('mobileChart').getContext('2d');
+        new Chart(mobileCtx, {
+            type: 'line',
+            data: {
+                labels: ['<50 mots', '51-80 mots', '81-120 mots', '121-200 mots', '200+ mots'],
+                datasets: [
+                    {
+                        label: 'Lecture Mobile',
+                        data: [89, 78, 34, 18, 7],
+                        borderColor: '#FFEB69',
+                        backgroundColor: 'rgba(255, 235, 105, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Lecture Desktop',
+                        data: [95, 92, 78, 56, 34],
+                        borderColor: '#D5C8FF',
+                        backgroundColor: 'rgba(213, 200, 255, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Taux de lecture complète (%)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Funnel Chart
+        const funnelCtx = document.getElementById('funnelChart').getContext('2d');
+        new Chart(funnelCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Emails Envoyés', 'Ouvertures', 'Réponses', 'Meetings'],
+                datasets: [
+                    {
+                        label: 'Commercial Moyen',
+                        data: [1000, 273, 19, 3],
+                        backgroundColor: 'rgba(107, 114, 128, 0.5)',
+                        borderColor: '#6B7280',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Top 25%',
+                        data: [1000, 465, 46, 13],
+                        backgroundColor: 'rgba(213, 200, 255, 0.5)',
+                        borderColor: '#D5C8FF',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Top 10%',
+                        data: [1000, 579, 79, 23],
+                        backgroundColor: 'rgba(255, 235, 105, 0.5)',
+                        borderColor: '#FFEB69',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        type: 'logarithmic',
+                        title: {
+                            display: true,
+                            text: 'Volume (échelle log)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Seasonal Chart
+        const seasonalCtx = document.getElementById('seasonalChart').getContext('2d');
+        new Chart(seasonalCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc'],
+                datasets: [{
+                    label: 'Délivrabilité (%)',
+                    data: [99.19, 98.7, 98.2, 97.8, 96.9, 96.1, 95.8, 95.4, 95.57, 94.36, 92.53, 93.13],
+                    borderColor: '#FFEB69',
+                    backgroundColor: 'rgba(255, 235, 105, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 6,
+                    pointBackgroundColor: '#FFEB69',
+                    pointBorderColor: '#1A1914',
+                    pointBorderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 90,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Taux de délivrabilité (%)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Subject Chart
+        const subjectCtx = document.getElementById('subjectChart').getContext('2d');
+        new Chart(subjectCtx, {
+            type: 'line',
+            data: {
+                labels: ['1-2 mots', '3-4 mots', '5-6 mots', '7-8 mots', '9+ mots'],
+                datasets: [{
+                    label: 'Taux d\'ouverture (%)',
+                    data: [62, 58, 41, 27, 12],
+                    borderColor: '#FFEB69',
+                    backgroundColor: 'rgba(255, 235, 105, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 8,
+                    pointBackgroundColor: '#FFEB69',
+                    pointBorderColor: '#1A1914',
+                    pointBorderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 70,
+                        title: {
+                            display: true,
+                            text: 'Taux d\'ouverture (%)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Multi-Touch Chart
+        const multiTouchCtx = document.getElementById('multiTouchChart').getContext('2d');
+        new Chart(multiTouchCtx, {
+            type: 'line',
+            data: {
+                labels: ['Email 1', 'Email 2', 'Touch 3', 'Touch 4', 'Email 5', 'Email 6'],
+                datasets: [
+                    {
+                        label: 'Taux de Réponse par Touch (%)',
+                        data: [1.9, 1.2, 0.9, 0.8, 0.7, 0.6],
+                        borderColor: '#FFEB69',
+                        backgroundColor: 'rgba(255, 235, 105, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Taux de Réponse Cumulé (%)',
+                        data: [1.9, 3.1, 4.0, 4.8, 5.5, 6.1],
+                        borderColor: '#D5C8FF',
+                        backgroundColor: 'rgba(213, 200, 255, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        borderDash: [5, 5]
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 7,
+                        title: {
+                            display: true,
+                            text: 'Taux de Réponse (%)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
