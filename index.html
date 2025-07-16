@@ -6,6 +6,7 @@
     <title>Étude Strategic Cold Email 2025 - 85M+ Emails Analysés</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
         * {
@@ -38,6 +39,92 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        /* Logo salesCraft */
+        .salescraft-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .salescraft-logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent1), var(--accent2));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 16px;
+            color: var(--primary);
+        }
+
+        .salescraft-logo-text {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .salescraft-logo-text .craft {
+            color: var(--accent1);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Hero Logo */
+        .hero-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .hero-logo .salescraft-logo {
+            justify-content: center;
+            opacity: 0.9;
+        }
+
+        .hero-logo .salescraft-logo-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+        }
+
+        .hero-logo .salescraft-logo-text {
+            font-size: 1.3rem;
+            color: var(--white);
+        }
+
+        .hero-logo .salescraft-logo-text .craft {
+            color: var(--accent1);
+        }
+
+        /* Footer Logo */
+        .footer-logo {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo .salescraft-logo {
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo .salescraft-logo-text {
+            color: var(--white);
+        }
+
+        .footer-logo .salescraft-logo-text .craft {
+            color: var(--accent1);
+        }
+
+        .footer-logo-tagline {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            color: var(--white);
+            font-style: italic;
         }
 
         /* Navigation Menu - Optimisé mobile */
@@ -1104,6 +1191,16 @@
                 grid-template-columns: 1fr;
                 gap: 10px;
             }
+
+            .salescraft-logo-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+
+            .salescraft-logo-text {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -1111,7 +1208,10 @@
     <!-- Navigation Menu -->
     <nav class="nav-menu">
         <div class="nav-content">
-            <div class="nav-logo">COLD EMAIL STUDY 2025</div>
+            <div class="salescraft-logo">
+                <div class="salescraft-logo-icon">S</div>
+                <div class="salescraft-logo-text">sales<span class="craft">Craft</span></div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#cost-reality">Coût réalité</a></li>
                 <li><a href="#mobile-reality">Mobile</a></li>
@@ -1129,6 +1229,13 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="hero-logo">
+                    <div class="salescraft-logo">
+                        <div class="salescraft-logo-icon">S</div>
+                        <div class="salescraft-logo-text">sales<span class="craft">Craft</span></div>
+                    </div>
+                </div>
+                
                 <div class="hero-badge">ÉTUDE EXCLUSIVE 2025</div>
                 
                 <h1>
@@ -2101,6 +2208,16 @@
             <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.7;">
                 Pas de vente forcée. Juste 30 minutes pour identifier vos 3 premiers axes d'amélioration.
             </p>
+            
+            <div class="footer-logo">
+                <div class="salescraft-logo">
+                    <div class="salescraft-logo-icon">S</div>
+                    <div class="salescraft-logo-text">sales<span class="craft">Craft</span></div>
+                </div>
+                <div class="footer-logo-tagline">
+                    "On ne cash te rien. On te partage nos techniques, expérience et conseils."
+                </div>
+            </div>
         </div>
     </section>
 
